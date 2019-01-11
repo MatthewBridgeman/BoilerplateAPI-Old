@@ -1,0 +1,31 @@
+{
+    "extends": "airbnb-base",
+    "rules": {
+        "max-len": [1, {
+            "code": 120,
+            "ignoreComments": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+        }],
+        "indent": [1, 4, {"SwitchCase" : 1}],
+        "global-require": 0,
+        "class-methods-use-this": 0,
+        "no-console": 0,
+        "no-plusplus": [ 2, { "allowForLoopAfterthoughts": true }],
+        "no-param-reassign": 0,
+        "no-nested-ternary": 0,
+        "no-unused-vars": 1,
+        "no-multiple-empty-lines": [2, { "max": 1, "maxBOF": 0, "maxEOF": 1 }],
+        "object-curly-newline": [2, {
+            "ObjectExpression": { "consistent": true },
+            "ObjectPattern": { "consistent": true },
+            "ImportDeclaration": { "consistent": true},
+            "ExportDeclaration": { "consistent": true }
+        }]
+    },
+    "env": {
+        "es6": true,
+        "node": true
+    }
+}

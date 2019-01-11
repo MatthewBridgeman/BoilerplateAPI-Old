@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "api",
+        "password": "apipassword",
+        "database": "ffr_database",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "api",
+        "password": "apipassword",
+        "database": "ffr_database_test",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    },
+    "production": {
+        "username": "api",
+        "password": "apipassword",
+        "database": "ffr_database_prod",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}

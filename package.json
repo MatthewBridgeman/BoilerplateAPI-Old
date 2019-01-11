@@ -1,0 +1,41 @@
+{
+    "name": "api",
+    "version": "1.0.0",
+    "description": "I am an API, I do things and stuff",
+    "main": "index.js",
+    "scripts": {
+        "eslint": "eslint src",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start-dev": "nodemon src/server.js --exec \"npm run eslint && node\"",
+        "start-dev-nolint": "nodemon src/server.js",
+        "start-dev-cluster": "nodemon src/cluster.js"
+    },
+    "author": "SynthDark",
+    "license": "ISC",
+    "dependencies": {
+        "async": "^2.6.1",
+        "auto-bind": "^2.0.0",
+        "bcrypt-nodejs": "0.0.3",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.5",
+        "express": "^4.16.4",
+        "express-winston": "^2.6.0",
+        "helmet": "^3.15.0",
+        "jsonwebtoken": "^8.4.0",
+        "moment": "^2.23.0",
+        "moment-timezone": "^0.5.23",
+        "morgan": "^1.9.1",
+        "mysql2": "^1.6.4",
+        "sequelize": "^4.42.0",
+        "validator": "^10.10.0",
+        "winston": "^2.4.4",
+        "winston-papertrail": "^1.0.5"
+    },
+    "devDependencies": {
+        "eslint": "^5.11.1",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "sequelize-cli": "^5.4.0"
+    }
+}
