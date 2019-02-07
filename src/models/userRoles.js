@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Users = sequelize.define('Users', {
+    const UserRoles = sequelize.define('UserRoles', {
         id: {
             type: DataTypes.INTEGER(11).UNSIGNED,
             allowNull: false,
@@ -8,21 +8,13 @@ module.exports = (sequelize, DataTypes) => {
             unique: true,
             unsigned: true,
         },
-        firstName: {
-            type: DataTypes.STRING(255),
+        userId: {
+            type: DataTypes.INTEGER(11).UNSIGNED,
             allowNull: false,
+            unsigned: true,
         },
-        lastName: {
-            type: DataTypes.STRING(255),
-            allowNull: false,
-        },
-        email: {
-            type: DataTypes.ENUM('message', 'redaction'),
-            allowNull: false,
-            unique: true,
-        },
-        password: {
-            type: DataTypes.STRING(255),
+        role: {
+            type: DataTypes.ENUM('customer', 'support', 'admin'),
             allowNull: false,
         },
         updatedAt: {
@@ -43,13 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         paranoid: true,
         timestamps: true,
-        classMethods: {
-            associate(models) {
-                Users.hasMany(models.userRoles, { foreignKey: 'userId', sourceKey: 'id' });
-                Users.hasMany(models.userDevices, { foreignKey: 'userId', sourceKey: 'id' });
-            },
-        },
     });
 
-    return Users;
+    return UserRoles;
 };

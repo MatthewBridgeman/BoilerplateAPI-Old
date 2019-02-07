@@ -1,10 +1,10 @@
 module.exports = {
-    env: 'development',
+    env: 'production',
     db: {
         development: {
             username: 'api',
             password: 'apipassword',
-            database: 'ffr_database',
+            database: 'database',
             host: 'localhost',
             dialect: 'mysql',
             maxConnections: 10,
@@ -12,7 +12,7 @@ module.exports = {
         production: {
             username: 'api',
             password: 'apipassword',
-            database: 'ffr_database_prod',
+            database: 'database',
             host: 'localhost',
             dialect: 'mysql',
             maxConnections: 10,
@@ -20,7 +20,7 @@ module.exports = {
         test: {
             username: 'api',
             password: 'apipassword',
-            database: 'ffr_database_test',
+            database: 'database_test',
             host: 'localhost',
             dialect: 'mysql',
             maxConnections: 10,
@@ -35,5 +35,6 @@ module.exports = {
     papertrail: {
         host: 'logs7.papertrailapp.com',
         port: 26521,
+        fullErrorLogging: false,
     },
 };

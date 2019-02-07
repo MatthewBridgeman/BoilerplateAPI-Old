@@ -1,38 +1,38 @@
 module.exports = (sequelize, DataTypes) => {
     const Events = sequelize.define('Events', {
         id: {
+            type: DataTypes.INTEGER(11).UNSIGNED,
             allowNull: false,
             autoIncrement: true,
-            type: DataTypes.INTEGER(11).UNSIGNED,
             primaryKey: true,
             unique: true,
             unsigned: true,
         },
         type: {
-            allowNull: false,
             type: DataTypes.ENUM('message', 'redaction'),
+            allowNull: false,
         },
         content: {
-            allowNull: false,
             type: DataTypes.STRING(255),
+            allowNull: false,
         },
         sender: {
-            allowNull: false,
             type: DataTypes.STRING(255),
+            allowNull: false,
         },
         updatedAt: {
-            allowNull: false,
             type: 'TIMESTAMP',
+            allowNull: false,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         },
         createdAt: {
-            allowNull: false,
             type: 'TIMESTAMP',
+            allowNull: false,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         },
         deletedAt: {
-            allowNull: false,
             type: 'TIMESTAMP',
+            allowNull: false,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
         },
     }, {

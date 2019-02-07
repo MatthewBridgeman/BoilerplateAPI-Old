@@ -15,8 +15,10 @@
         "no-plusplus": [ 2, { "allowForLoopAfterthoughts": true }],
         "no-param-reassign": 0,
         "no-nested-ternary": 0,
-        "no-unused-vars": 1,
+        "no-unused-vars": [1, { "argsIgnorePattern": "next" }],
         "no-multiple-empty-lines": [2, { "max": 1, "maxBOF": 0, "maxEOF": 1 }],
+        "no-unused-expressions": [2, { "allowTernary": true }],
+        "no-warning-comments": [1, { "terms": ["TODO"], "location": "start" }],
         "object-curly-newline": [2, {
             "ObjectExpression": { "consistent": true },
             "ObjectPattern": { "consistent": true },

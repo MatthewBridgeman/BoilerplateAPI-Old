@@ -41,7 +41,6 @@ class AuthControllerClass {
                 email,
             },
         };
-
         const user = await Users.findOne(options);
         if (!user) return res.authentificationError('User not found.');
 
@@ -50,19 +49,19 @@ class AuthControllerClass {
         user.password = undefined;
 
         const token = jsonWebToken.sign(
-            { id: user._id },
+            { userId: user.id },
             jwt.secret,
-            {  expiresIn: jwt.expiry },
+            { expiresIn: jwt.expiry },
         );
 
-        res.success({
+        return res.success({
             token,
             user,
         });
     }
 
-    async logout(req, res) {
-        res.success('logout');
+    logout(req, res) {
+        return res.success(req.user);
     }
 }
 
